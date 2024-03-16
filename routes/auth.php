@@ -57,3 +57,5 @@ Route::middleware('auth')->group(function () {
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout');
 });
+
+Route::get('/users',[\App\Http\Controllers\api\AfrimetaController::class, 'index']);
